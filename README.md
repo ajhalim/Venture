@@ -20,3 +20,8 @@ Asset sources:
 Code sources:
 - `adventure.js` and `index.html` were created for this project [Adam Smith](https://github.com/rndmcnlly) and edited by me.
 - `game.js` was sketched by [Adam Smith](https://github.com/rndmcnlly) and rewritten by me.
+
+
+// Notes done by Student(ajhalim)
+
+I wrote some pretty bad basic scenes, the only real thing is whether you go to cabin and take a torch, if you take torch you win, if you don't you don't.
