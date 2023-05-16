@@ -90,6 +90,15 @@ class sceneMount2 extends AdventureScene {
             }
         })
 
+        this.add.text(this.w *.7, this.h * .05, "outside")
+        .setInteractive()
+        .on('pointerover', () => {
+            this.showMessage("try to go back");
+        })
+        .on('pointerdown', () => {
+            //this.gotoScene('scene1');
+            this.showMessage("You can't you've come too far now");
+        })
 
     }
 }
@@ -110,6 +119,15 @@ class sceneMount1 extends AdventureScene {
         })
         .on('pointerdown', () => {
             this.gotoScene('sceneMount2');
+        })
+
+        this.add.text(this.w *.7, this.h * .05, "go back")
+        .setInteractive()
+        .on('pointerover', () => {
+            this.showMessage("leave");
+        })
+        .on('pointerdown', () => {
+            this.gotoScene('scene1');
         })
 
     }
@@ -206,7 +224,7 @@ class Intro extends Phaser.Scene {
         });
     }
 }
-    
+
 const game = new Phaser.Game({
     scale: {
         mode: Phaser.Scale.FIT,
