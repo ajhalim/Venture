@@ -1,3 +1,5 @@
+Personal changes written past line 27
+
 A simple adventure game by {who?} based on a simple adventure game engine by [Adam Smith](https://github.com/rndmcnlly).
 
 Code requirements:
@@ -25,3 +27,4 @@ Code sources:
 // Notes done by Student(ajhalim)
 
 I wrote some pretty bad basic scenes, the only real thing is whether you go to cabin and take a torch, if you take torch you win, if you don't you don't.
+The changes I made were changing the bg to a lighter color, made the inventory/msg box brown, turned the msgs into a brighter more striking yellow, also the yellow text stayed up longer, 32 seconds instead of the normal 4 seconds. Also changed inventory to inv
