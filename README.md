@@ -28,3 +28,5 @@ Code sources:
 
 I wrote some pretty bad basic scenes, the only real thing is whether you go to cabin and take a torch, if you take torch you win, if you don't you don't.
 The changes I made were changing the bg to a lighter color, made the inventory/msg box brown, turned the msgs into a brighter more striking yellow, also the yellow text stayed up longer, 32 seconds instead of the normal 4 seconds. Also changed inventory to inv
+
+I made the assets by either doing the phaser shape tool and manually writing in values or I made the visual assets in google drawings like the skull and cave spikes. Honestly I should have just used pngs, they're easier to use than the shapes in phaser, I hate making triangles. those triangles took at least half an hour to get my mind around, should have read documentation better, but I didn't and just waisted time
