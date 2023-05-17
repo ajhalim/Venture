@@ -16,31 +16,36 @@ class AdventureScene extends Phaser.Scene {
         this.h = this.game.config.height;
         this.s = this.game.config.width * 0.01;
 
-        this.cameras.main.setBackgroundColor('#444');
+        //I changed this color to a lighter grey
+        this.cameras.main.setBackgroundColor('#4C4E52');
         this.cameras.main.fadeIn(this.transitionDuration, 0, 0, 0);
 
-        this.add.rectangle(this.w * 0.75, 0, this.w * 0.25, this.h).setOrigin(0, 0).setFillStyle(0);
+        //made color brown
+        //mode font smaller also a more intense tellow
+        //changed inventory to inv
+        this.add.rectangle(this.w * 0.75, 0, this.w * 0.25, this.h).setOrigin(0, 0).setFillStyle(0x30221d);
         this.add.text(this.w * 0.75 + this.s, this.s)
             .setText(this.name)
-            .setStyle({ fontSize: `${3 * this.s}px` })
+            .setStyle({ fontSize: `${2 * this.s}px` })
             .setWordWrapWidth(this.w * 0.25 - 2 * this.s);
         
         this.messageBox = this.add.text(this.w * 0.75 + this.s, this.h * 0.33)
-            .setStyle({ fontSize: `${2 * this.s}px`, color: '#eea' })
+            .setStyle({ fontSize: `${2 * this.s}px`, color: '#FFFF00' })
             .setWordWrapWidth(this.w * 0.25 - 2 * this.s);
 
         this.inventoryBanner = this.add.text(this.w * 0.75 + this.s, this.h * 0.66)
             .setStyle({ fontSize: `${2 * this.s}px` })
-            .setText("Inventory")
+            .setText("Inv")
             .setAlpha(0);
 
         this.inventoryTexts = [];
         this.updateInventory();
 
+        //changed messages to FS
         this.add.text(this.w-3*this.s, this.h-3*this.s, "📺")
             .setStyle({ fontSize: `${2 * this.s}px` })
             .setInteractive({useHandCursor: true})
-            .on('pointerover', () => this.showMessage('Fullscreen?'))
+            .on('pointerover', () => this.showMessage('FS?'))
             .on('pointerdown', () => {
                 if (this.scale.isFullscreen) {
                     this.scale.stopFullscreen();
@@ -59,7 +64,8 @@ class AdventureScene extends Phaser.Scene {
             targets: this.messageBox,
             alpha: { from: 1, to: 0 },
             easing: 'Quintic.in',
-            duration: 4 * this.transitionDuration
+            //changed time so that it lasts pretty much as long as needed
+            duration: 32 * this.transitionDuration
         });
     }
 
